@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Study Planner</h1>
+            <p>Get personalized study schedules powered by AI</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <form id="studyForm">
+                    <div class="form-group">
+                        <label for="subjects">Subjects (comma-separated):</label>
+                        <input type="text" id="subjects" required placeholder="Math, Physics, Chemistry">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studyHours">Available study hours per day:</label>
+                        <input type="number" id="studyHours" required min="1" max="24" placeholder="6">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goals">Study goals:</label>
+                        <textarea id="goals" required placeholder="Describe your study goals..."></textarea>
+                    </div>
+
+                    <button type="submit">Generate Study Plan</button>
+                </form>
+            </div>
+
+            <div class="output-section">
+                <div id="loadingSpinner" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Generating your personalized study plan...</p>
+                </div>
+                <div id="studyPlan" class="hidden">
+                    <h2>Your Personalized Study Plan</h2>
+                    <div id="planContent"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="creator-section">
+            <div class="creator-container">
+                <h3>Created By</h3>
+                <div class="creators">
+                    <div class="creator">
+                        <span class="creator-name">Ishmeet Singh Saini</span>
+                    </div>
+                    <div class="creator-separator">&</div>
+                    <div class="creator">
+                        <span class="creator-name">Manish Kumar Singh</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
