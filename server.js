@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // Initialize Gemini AI
-const genAI = new GoogleGenerativeAI("AIzaSyCGAn3RhqA8403v-1wa3OK3ghvYIkvEZKc");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 // Routes
 app.get('/', (req, res) => {
